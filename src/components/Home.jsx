@@ -10,7 +10,8 @@ function Home() {
     const difficulties = [
         { value: 'easy', label: 'Fácil' },
         { value: 'medium', label: 'Médio' },
-        { value: 'hard', label: 'Difícil' }
+        { value: 'hard', label: 'Difícil' },
+        { value: 'rubens', label: '💀Rubens💀' },
     ]
 
     // Função para lidar com a mudança de dificuldade
@@ -35,7 +36,7 @@ function Home() {
                     Quebra Código
                 </h1>
                 <label htmlFor="difficulty" className="block mb-2 text-lg text-[#f4ff9b] font-medium">
-                    Selecione a dificuldade
+                    Escolha a dificuldade
                 </label>
                 <select
                     name="difficulty"

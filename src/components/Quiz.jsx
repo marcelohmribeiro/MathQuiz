@@ -5,10 +5,11 @@ function Quiz() {
     const navigate = useNavigate()
     const location = useLocation()
     const { difficulty, questions } = location.state || {}
+
+    const [currentIndex, setCurrentIndex] = useState(0)
     const currentQuestion = questions[currentIndex]
 
     const [progress, setProgress] = useState(0)
-    const [currentIndex, setCurrentIndex] = useState(0)
     const [feedback, setFeedback] = useState(null)
     const [isDisabled, setIsDisabled] = useState(false)
     const [time, setTime] = useState(0)

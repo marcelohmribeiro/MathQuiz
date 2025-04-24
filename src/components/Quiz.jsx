@@ -5,6 +5,7 @@ import peido from "./sounds/peido.mp3"
 import errou from "./sounds/errou.mp3"
 // Components
 import IntroRubens from "./IntroRubens"
+import HintRubens from "./HintRubens"
 
 function Quiz() {
     const navigate = useNavigate()
@@ -26,6 +27,7 @@ function Quiz() {
     const [timeElapsed, setTimeElapsed] = useState(0)
 
     const [showIntro, setShowIntro] = useState(false)
+    const [isSoundEnabled, setIsSoundEnabled] = useState(true)
 
     const sounds = [
         peido,
@@ -58,10 +60,20 @@ function Quiz() {
         if (difficulty === 'rubens' && !showIntro) return
         if (time === null) return
         if (time <= 0) {
-            setFeedback("⏰ Tempo esgotado!")
+            setFeedback("⏰ Tempo esgotado! ⏰")
             setIsDisabled(true)
-            setTimeout(() => navigate('/score'), 1500)
-            return
+            const lengthQuestions = questions.length
+            setTimeout(() => {
+                navigate('/score', {
+                    state: {
+                        updatedScore: score,
+                        correctAnswers,
+                        time: timeElapsed,
+                        lengthQuestions,
+                        difficulty
+                    }
+                })
+            }, 1500)
         }
         const timer = setInterval(() => {
             setTime(prev => prev - 1)
@@ -85,16 +97,23 @@ function Quiz() {
             ...q,
             options: shuffleArray(q.options)
         }))
-
         setRandowQuestions(randomized)
         setCurrentQuestion(randomized[0])
         setTime(initialTime())
     }, [difficulty, questions, showIntro])
 
+    // Função para tocar o som
     const playSound = (src) => {
+        if (!isSoundEnabled) return
         const audio = new Audio(src)
         audio.play()
     }
+
+    // Função para deligar o som
+    const toggleSound = () => {
+        setIsSoundEnabled(prev => !prev)
+    }
+
     // Progresso do quiz
     function handleAnswer(selectedOption) {
         if (isDisabled) return
@@ -113,6 +132,7 @@ function Quiz() {
             setCurrentIndex(currentIndex + 1)
             setTime(initialTime())
         } else {
+
             playSound(getRandomSound(sounds))
             setTime(initialTime())
             setProgress(((currentIndex + 1) / questions.length) * 100)
@@ -122,14 +142,19 @@ function Quiz() {
             setFeedback(null)
             setIsDisabled(false)
             setShowHint(false)
-
             if (currentIndex < randowQuestions.length - 1) {
                 const nextIndex = currentIndex + 1
                 setCurrentIndex(nextIndex)
                 setCurrentQuestion(randowQuestions[nextIndex])
             } else {
                 navigate("/score", {
-                    state: { updatedScore, correctAnswers: updatedCorrectAnswers, time: timeElapsed, lengthQuestions, difficulty }
+                    state: {
+                        updatedScore,
+                        correctAnswers: updatedCorrectAnswers,
+                        time: timeElapsed,
+                        lengthQuestions,
+                        difficulty
+                    }
                 })
             }
         }, 1200)
@@ -151,7 +176,15 @@ function Quiz() {
     // Verifica se a dificuldade, questões e pergunta atual estão definidas
     if (!difficulty || !questions || !currentQuestion || time === null) return null
     return (
-        <div className={`flex items-center justify-center h-screen px-4 ${difficulty === 'rubens' ? 'bg-gradient-to-br from-[#300000] via-[#600000] to-[#1a0000]' : 'bg-[#050805]'}`}>
+        <div className={`flex items-center justify-center h-screen ${difficulty === 'rubens' ? 'bg-gradient-to-br from-[#300000] via-[#600000] to-[#1a0000]' : 'bg-[#050805]'}`}>
+            <div className="absolute top-4 right-4">
+                <button
+                    onClick={toggleSound}
+                    className="bg-gray-800 text-white px-3 py-1 rounded text-xs hover:bg-gray-700 transition"
+                >
+                    Som: {isSoundEnabled ? "🔊 Ligado" : "🔇 Desligado"}
+                </button>
+            </div>
             <div className="w-full max-w-md">
                 <div className={`flex justify-between px-6 py-3 rounded-t-lg border border-b-0
                     ${difficulty === 'rubens'
@@ -160,7 +193,14 @@ function Quiz() {
                     }`}
                 >
                     <h2 className="text-sm uppercase">
-                        Dificuldade: <span className={`capitalize font-bold ${difficulty === 'rubens' ? 'text-[#ff4c4c]' : 'text-[#f7e94c]'}`}>{difficulty}</span>
+                        Dificuldade: <span className={`capitalize font-bold 
+                            ${difficulty === 'easy' ? 'text-[#4CAF50]' :
+                                difficulty === 'medium' ? 'text-[#f7e94c]' :
+                                    difficulty === 'hard' ? 'text-[#F44336]' :
+                                        'text-[#ff4c4c]'
+                            }`}>
+                            {difficulty === 'easy' ? 'Facíl' : difficulty === 'medium' ? 'Médio' : difficulty === 'hard' ? 'Difícil' : '💀Rubens💀'}
+                        </span>
                     </h2>
                     <p className="text-sm">
                         Tempo: <span className={`${time <= 10 ? 'text-[#ff4c4c]' : difficulty === 'rubens' ? 'text-[#ff9999]' : 'text-[#f7e94c]'}`}>{time}s</span>
@@ -184,9 +224,7 @@ function Quiz() {
                             style={{ width: `${progress}%` }}
                         />
                     </div>
-
                     <h3 className="text-base mb-6 text-white">{currentQuestion.question}</h3>
-
                     <ul className="space-y-3 mb-4">
                         {currentQuestion.options.map((option, i) => (
                             <li
@@ -202,7 +240,7 @@ function Quiz() {
                             </li>
                         ))}
                     </ul>
-                    {difficulty !== 'rubens' && !showHint && (
+                    {difficulty !== 'rubens' && !showHint && currentQuestion.hint && (
                         <button
                             onClick={handleShowHint}
                             className={`${difficulty === 'rubens'
@@ -214,9 +252,9 @@ function Quiz() {
                         </button>
                     )}
                     {difficulty !== 'rubens' && showHint && currentQuestion.hint && (
-                        <p className={`text-xs mt-2 ${difficulty === 'rubens' ? 'text-[#ff9999]' : 'text-[#f7e94c]'}`}>
-                            <span className="text-white">Dica: </span>{currentQuestion.hint}
-                        </p>
+                        <div className="flex justify-center">
+                            {<HintRubens hint={currentQuestion.hint} />}
+                        </div>
                     )}
                     {feedback && (
                         <p className="mt-2 text-sm text-[#f7e94c] animate-pulse">{feedback}</p>

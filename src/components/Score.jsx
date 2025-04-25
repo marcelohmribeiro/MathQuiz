@@ -33,13 +33,13 @@ function Score() {
                 <div className="flex justify-between mb-6">
                     <div>
                         <p className="text-lg font-semibold mb-2">Dificuldade:</p>
-                        <p className={`uppercase 
-                            ${difficulty === 'easy' ? 'text-[#4CAF50]' :
+                        <p className=
+                            {`${difficulty === 'easy' ? 'text-[#4CAF50]' :
                                 difficulty === 'medium' ? 'text-[#FFC107]' :
                                     difficulty === 'rubens' ? 'text-red-500 animate-pulse' :
                                         'text-[#F44336]'}`
-                        }>
-                            {difficulty}
+                            }>
+                            {difficulty === 'easy' ? 'Facíl' : difficulty === 'medium' ? 'Médio' : difficulty === 'hard' ? 'Difícil' : difficulty === 'rubens' ? '💀Rubens💀' : difficulty}
                         </p>
                     </div>
                     <div>

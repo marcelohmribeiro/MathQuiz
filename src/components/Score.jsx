@@ -7,7 +7,7 @@ function Score() {
 
     return (
         <div className={`flex items-center justify-center h-screen px-4 
-            ${difficulty === 'rubens' ? 'bg-gradient-to-br from-[#2e0505] via-[#5a0303] to-[#120202] text-red-100' : 'bg-[#080e08] text-[#c7f14f]'}`}>
+            ${difficulty === 'rubens' ? 'bg-gradient-to-br from-[#300000] to-[#1a0000] text-red-200' : 'bg-[#080e08] text-[#c7f14f]'}`}>
             <div className={`rounded-lg w-full max-w-sm p-8 text-center shadow-md border
                     ${difficulty === 'rubens'
                     ? 'border-red-600 bg-[#1a0000]'

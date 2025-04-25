@@ -1,34 +1,67 @@
 {
+<<<<<<< HEAD
   "hash": "4cf8033b",
   "configHash": "b2e1bbf3",
   "lockfileHash": "251eeb66",
   "browserHash": "fe27c10b",
+=======
+  "hash": "d3236449",
+  "configHash": "b2e1bbf3",
+  "lockfileHash": "4ce52d0d",
+  "browserHash": "2a64bd11",
+>>>>>>> trabalhando
   "optimized": {
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
+<<<<<<< HEAD
       "fileHash": "3978b004",
+=======
+      "fileHash": "5f091ccb",
+>>>>>>> trabalhando
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
+<<<<<<< HEAD
       "fileHash": "755534be",
+=======
+      "fileHash": "2622ba29",
+>>>>>>> trabalhando
       "needsInterop": true
     },
     "react-router-dom": {
       "src": "../../node_modules/react-router-dom/dist/index.mjs",
       "file": "react-router-dom.js",
+<<<<<<< HEAD
       "fileHash": "55d57893",
+=======
+      "fileHash": "b0d47604",
+      "needsInterop": false
+    },
+    "framer-motion": {
+      "src": "../../node_modules/framer-motion/dist/es/index.mjs",
+      "file": "framer-motion.js",
+      "fileHash": "2b669749",
+>>>>>>> trabalhando
       "needsInterop": false
     }
   },
   "chunks": {
+<<<<<<< HEAD
     "chunk-WZVU6G5Y": {
       "file": "chunk-WZVU6G5Y.js"
     },
     "chunk-Q462PRL3": {
       "file": "chunk-Q462PRL3.js"
+=======
+    "chunk-WEJJOBXA": {
+      "file": "chunk-WEJJOBXA.js"
+    },
+    "chunk-VCDLJVZS": {
+      "file": "chunk-VCDLJVZS.js"
+>>>>>>> trabalhando
     }
   }
 }

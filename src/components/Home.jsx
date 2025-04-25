@@ -53,7 +53,7 @@ function Home() {
                 <label
                     htmlFor="difficulty"
                     className={`block mb-2 !text-[#F7FCE9] text-3xl font-['Jersey_15',_sans-serif] transition-colors duration-300
-                    ${selectedDifficulty === 'rubens' ? '!text-[#ffcccc]' : '!text-[#f4ff9b]'}`}
+                    ${selectedDifficulty === 'rubens' ? '!text-[#ffcccc]' : '!text-[#F7FCE9]'}`}
                 >
                     Escolha a dificuldade
                 </label>

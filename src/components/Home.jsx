@@ -78,10 +78,9 @@ function Home() {
 
                     className={`hover:bg-[#6A8816] bg-[##C0E850] text-[#F7FCE9] font-['Jersey_15',_sans-serif] cursor-pointer text-3xl px-3 py-3 rounded-xl w-full transition-all duration-200
             ${selectedDifficulty === 'rubens'
-                            ? 'bg-red-600 border-red-500 hover:bg-red-700 text-white shadow-red-500/50'
+                            ? 'bg-red-600 border-red-500 hover:bg-red-700 text-white shadow-red-500/50' 
                             : 'bg-[#91c659] hover:bg-[#7ba64c] border-[#C0E850] text-black shadow-[#c7f14f]/30'
                         }`}
-
                 >
                     Jogar
                 </button>

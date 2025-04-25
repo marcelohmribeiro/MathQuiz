@@ -14,3 +14,10 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.select-center {
+  text-align: center;             /* alinha o texto enquanto o dropdown está fechado */
+  text-align-last: center;        /* alinha a “última linha” (o texto selecionado) */ 
+  -moz-text-align-last: center;   /* Firefox legacy */ 
+  -webkit-text-align-last: center;/* Safari/Chrome legacy */ 
+}

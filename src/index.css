@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jersey+15&family=Sixtyfour&display=swap');
 @import "tailwindcss";
-@theme{
-  --font-Sixtyfour : 'Sixtyfour', sans-serif;
-  --font-Sixtyfour : 'Jersey 15', sans-serif;
-}
 
 body {
   font-family: monospace, sans-serif;
@@ -13,11 +9,4 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-}
-
-.select-center {
-  text-align: center;             /* alinha o texto enquanto o dropdown está fechado */
-  text-align-last: center;        /* alinha a “última linha” (o texto selecionado) */ 
-  -moz-text-align-last: center;   /* Firefox legacy */ 
-  -webkit-text-align-last: center;/* Safari/Chrome legacy */ 
 }

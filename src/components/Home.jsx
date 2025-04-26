@@ -81,6 +81,7 @@ function Home() {
                             ? 'bg-red-600 border-red-500 hover:bg-red-700 text-white shadow-red-500/50' 
                             : 'bg-[#91c659] hover:bg-[#7ba64c] border-[#C0E850] text-black shadow-[#c7f14f]/30'
                         }`}
+
                 >
                     Jogar
                 </button>

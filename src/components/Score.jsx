@@ -13,26 +13,24 @@ function Score() {
                     ? 'border-red-600 bg-[#1a0000]'
                     : 'border-[#c7f14f] bg-[#132513]'}`
             }>
-                <h1 className="text-3xl font-bold uppercase mb-6 tracking-wider">Resultado</h1>
-                <div className="flex justify-between mb-8">
+                <h1 className="text-3xl text-center text-[#F7FCE9] font-bold uppercase mb-6 tracking-wider">Resultado</h1>
+                <div className="grid grid-cols-2 gap-6 mb-8 font-['Jersey_15',_sans-serif] text-3xl">
                     <div>
-                        <p className="text-lg font-semibold mb-2">Pontuação:</p>
-                        <p className={`text-2xl font-bold 
+                        <p className=" text-center text-[#F7FCE9] mb-2">Pontuação:</p>
+                        <p className={`  
                         ${difficulty === 'rubens' ? 'text-red-400 drop-shadow-[0_0_6px_#ff0000]' : 'text-[#7ba64c]'}`}>
                             {updatedScore}
                         </p>
                     </div>
                     <div>
-                        <p className="text-lg font-semibold mb-2">Acertos:</p>
-                        <p className={`text-2xl font-bold
+                        <p className="text-[#F7FCE9] mb-2">Acertos:</p>
+                        <p className={`
                             ${difficulty === 'rubens' ? 'text-red-400 drop-shadow-[0_0_6px_#ff0000]' : 'text-[#7ba64c]'}`}>
                             {`${correctAnswers}/${lengthQuestions}`}
                         </p>
                     </div>
-                </div>
-                <div className="flex justify-between mb-6">
                     <div>
-                        <p className="text-lg font-semibold mb-2">Dificuldade:</p>
+                        <p className="text-center text-[#F7FCE9] mb-2">Dificuldade:</p>
                         <p className=
                             {`${difficulty === 'easy' ? 'text-[#4CAF50]' :
                                 difficulty === 'medium' ? 'text-[#FFC107]' :
@@ -43,16 +41,17 @@ function Score() {
                         </p>
                     </div>
                     <div>
-                        <p className="text-lg font-semibold mb-2">Tempo Total:</p>
-                        <p className="text-xl font-bold text-[#f7e94c]">{time}s</p>
+                        <p className="text-center text-[#F7FCE9] mb-2">Tempo Total:</p>
+                        <p className="text-[#f7e94c]">{time}s</p>
                     </div>
                 </div>
+
                 <button
                     onClick={() => navigate("/")}
-                    className={`w-full font-semibold cursor-pointer px-6 py-2 rounded-lg transition-all duration-300 
+                    className={`w-full text-3xl font-['Jersey_15',_sans-serif] cursor-pointer px-6 py-2 rounded-lg transition-all duration-300 
                         ${difficulty === 'rubens'
                             ? 'bg-red-600 hover:bg-red-700 text-white shadow-lg shadow-red-500/20'
-                            : 'bg-[#7ba64c] hover:bg-[#91c659] text-black'}`}
+                            : 'bg-[#7ba64c] hover:bg-[#91c659] text-[#F7FCE9]'}`}
                 >
                     Jogar Novamente
                 </button>

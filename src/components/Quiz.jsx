@@ -132,7 +132,6 @@ function Quiz() {
             setCurrentIndex(currentIndex + 1)
             setTime(initialTime())
         } else {
-
             playSound(getRandomSound(sounds))
             setTime(initialTime())
             setProgress(((currentIndex + 1) / questions.length) * 100)
@@ -176,7 +175,7 @@ function Quiz() {
     // Verifica se a dificuldade, questões e pergunta atual estão definidas
     if (!difficulty || !questions || !currentQuestion || time === null) return null
     return (
-        <div className={`flex items-center justify-center h-screen ${difficulty === 'rubens' ? 'bg-gradient-to-br from-[#300000] via-[#600000] to-[#1a0000]' : 'bg-[#050805]'}`}>
+        <div className={`flex items-center justify-center h-screen ${difficulty === 'rubens' ? 'bg-gradient-to-br from-[#300000] to-[#1a0000] text-red-200' : 'bg-[#050805]'}`}>
             <div className="absolute top-4 right-4">
                 <button
                     onClick={toggleSound}

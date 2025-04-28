@@ -1,3 +1,5 @@
+import grafico1 from "./img/grafico1.png"
+
 export const questions = {
   easy: [
     {
@@ -30,27 +32,39 @@ export const questions = {
       answer: "{2}",
       hint: "Conjunto unitário tem apenas UM elemento."
     }
-  ],  
-    medium: [
-      {
-        question: "Quanto é 12 ÷ 3?",
-        options: ["2", "3", "4", "5"],
-        answer: "4",
-      },
-    ],
-    hard: [
-      {
-        question: "Qual é a raiz quadrada de 144?",
-        options: ["10", "11", "12", "13"],
-        answer: "12",
-      },
-    ],
-    rubens: [
-      {
-        question: "Qual é a raiz quadrada de 144?",
-        options: ["10", "11", "12", "13"],
-        answer: "12",
-      }
-    ]
-  }
-  
+  ],
+  medium: [
+    {
+      question: "Quanto é 12 ÷ 3?",
+      options: ["2", "3", "4", "5"],
+      answer: "4",
+      hint: "Divida 12 por 3.",
+    },
+    {
+      question: "De acordo com o gráfico da função f(x) = 2x + 2 mostrado abaixo, assinale a alternativa correta:",
+      image: grafico1,
+      options: [
+        "A função é crescente e seu coeficiente angular é 2.",
+        "A função é decrescente e seu coeficiente angular é 2.",
+        "A função é crescente e seu coeficiente angular é 4.",
+        "A função é decrescente e seu coeficiente angular é 4."
+      ],
+      answer: "A função é crescente e seu coeficiente angular é 2.",
+      hint: "Observe a inclinação da reta."
+    },
+  ],
+  hard: [
+    {
+      question: "Qual é a raiz quadrada de 144?",
+      options: ["10", "11", "12", "13"],
+      answer: "12",
+    },
+  ],
+  rubens: [
+    {
+      question: "Qual é a raiz quadrada de 144?",
+      options: ["10", "11", "12", "13"],
+      answer: "12",
+    }
+  ]
+}

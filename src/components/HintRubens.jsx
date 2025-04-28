@@ -7,7 +7,7 @@ function HintRubens({ hint }) {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="fixed top-10 mt-10 flex justify-center items-center gap-4"
+            className="mb-10 flex justify-center items-center gap-4"
         >
             <img
                 src={rubens}

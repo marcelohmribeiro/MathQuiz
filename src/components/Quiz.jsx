@@ -6,6 +6,7 @@ import errou from "./sounds/errou.mp3"
 // Components
 import IntroRubens from "./IntroRubens"
 import HintRubens from "./HintRubens"
+import { img } from "framer-motion/client"
 
 function Quiz() {
     const navigate = useNavigate()
@@ -175,7 +176,7 @@ function Quiz() {
     // Verifica se a dificuldade, questões e pergunta atual estão definidas
     if (!difficulty || !questions || !currentQuestion || time === null) return null
     return (
-        <div className={`flex items-center justify-center h-screen ${difficulty === 'rubens' ? 'bg-gradient-to-br from-[#300000] to-[#1a0000] text-red-200' : 'bg-[#050805]'}`}>
+        <div className={`flex items-center justify-center h-screen px-4 ${difficulty === 'rubens' ? 'bg-gradient-to-br from-[#300000] to-[#1a0000] text-red-200' : 'bg-[#050805]'}`}>
             <div className="absolute top-4 right-4">
                 <button
                     onClick={toggleSound}
@@ -184,7 +185,12 @@ function Quiz() {
                     Som: {isSoundEnabled ? "🔊 Ligado" : "🔇 Desligado"}
                 </button>
             </div>
-            <div className="w-full max-w-md">
+            <div className="w-full max-w-3xl max-h-[90vh] overflow-y-auto hide-scrollbar">
+                {difficulty !== 'rubens' && showHint && currentQuestion.hint && (
+                    <div className="flex justify-center">
+                        {<HintRubens hint={currentQuestion.hint} />}
+                    </div>
+                )}
                 <div className={`flex justify-between px-6 py-3 rounded-t-lg border border-b-0
                     ${difficulty === 'rubens'
                         ? 'bg-[#3d0000] border-[#ff4c4c]'
@@ -215,7 +221,7 @@ function Quiz() {
                     <p className="text-sm mb-4">
                         Pontuação: <span className={`${difficulty === 'rubens' ? 'text-[#ff4c4c]' : 'text-[#f7e94c]'}`}>{score}</span>
                     </p>
-
+                    
                     <div className={`w-full h-3 rounded-full mb-6 ${difficulty === 'rubens' ? 'bg-[#4d0000]' : 'bg-[#1f2d1f]'}`}
                     >
                         <div
@@ -224,6 +230,13 @@ function Quiz() {
                         />
                     </div>
                     <h3 className="text-base mb-6 text-white">{currentQuestion.question}</h3>
+                    {currentQuestion.image && (
+                        <img
+                            src={currentQuestion.image}
+                            alt="Gráfico"
+                            className="mb-6 w-full max-w-xs mx-auto rounded-lg"
+                        />
+                    )}
                     <ul className="space-y-3 mb-4">
                         {currentQuestion.options.map((option, i) => (
                             <li
@@ -249,11 +262,6 @@ function Quiz() {
                         >
                             {difficulty === 'hard' ? "Mostrar dica (-5 pontos)" : "Mostrar dica (-3 pontos)"}
                         </button>
-                    )}
-                    {difficulty !== 'rubens' && showHint && currentQuestion.hint && (
-                        <div className="flex justify-center">
-                            {<HintRubens hint={currentQuestion.hint} />}
-                        </div>
                     )}
                     {feedback && (
                         <p className="mt-2 text-sm text-[#f7e94c] animate-pulse">{feedback}</p>

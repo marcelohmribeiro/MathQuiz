@@ -37,7 +37,7 @@ function Home() {
             }`}>
             <h1
                 className={`font-[Sixtyfour,_sans-serif] text-[#B1E325] text-5xl text-center uppercase mb-10 tracking-widest transition-colors duration-300 
-                    ${selectedDifficulty === 'rubens' ? 'text-[#ff4f4f]' : 'text-[#B1E325]'}`}
+                    ${selectedDifficulty === 'rubens' ? 'text-[#e74141]' : 'text-[#B1E325]'}`}
             >
                 Quebra Codigo
             </h1>
@@ -50,7 +50,7 @@ function Home() {
             >
                 <label
                     htmlFor="difficulty"
-                    className={`block mb-2 text-[#F7FCE9] text-3xl font-['Jersey_15',_sans-serif] transition-colors duration-300
+                    className={`block mb-2 !text-[#F7FCE9] text-3xl font-['Jersey_15',_sans-serif] transition-colors duration-300
                     ${selectedDifficulty === 'rubens' ? 'text-[#ffcccc]' : 'text-[#f4ff9b]'}`}
                 >
                     Escolha a dificuldade
@@ -78,7 +78,7 @@ function Home() {
 
                     className={`hover:bg-[#6A8816] bg-[##C0E850] text-[#F7FCE9] font-['Jersey_15',_sans-serif] cursor-pointer text-3xl px-3 py-3 rounded-xl w-full transition-all duration-200
             ${selectedDifficulty === 'rubens'
-                            ? 'bg-red-600 border-red-500 hover:bg-red-700 text-white shadow-red-500/50' 
+                            ? 'bg-red-600 border-red-500 hover:bg-red-700 text-white shadow-red-500/50'
                             : 'bg-[#91c659] hover:bg-[#7ba64c] border-[#C0E850] text-black shadow-[#c7f14f]/30'
                         }`}
 

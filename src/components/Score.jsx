@@ -51,7 +51,7 @@ function Score() {
                     className={`w-full text-3xl font-['Jersey_15',_sans-serif] cursor-pointer px-6 py-2 rounded-lg transition-all duration-300 
                         ${difficulty === 'rubens'
                             ? 'bg-red-600 hover:bg-red-700 text-white shadow-lg shadow-red-500/20'
-                            : 'bg-[#7ba64c] hover:bg-[#91c659] text-[#F7FCE9]'}`}
+                            : 'bg-[#7ba64c] hover:bg-[#91c659] !text-[#F7FCE9]'}`}
                 >
                     Jogar Novamente
                 </button>

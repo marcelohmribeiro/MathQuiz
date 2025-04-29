@@ -6,54 +6,31 @@ function Score() {
     const { updatedScore = 0, correctAnswers = 0, time = 0, lengthQuestions = 0, difficulty } = location.state || {}
 
     return (
-<<<<<<< HEAD
         <div className={` flex items-center justify-center h-screen px-4 
             ${difficulty === 'rubens' ? 'bg-gradient-to-br from-[#2e0505] via-[#5a0303] to-[#120202] text-red-100' : 'bg-[#080e08] text-[#c7f14f]'}`}>
             <div className={`border-[3px] rounded-lg w-full max-w-sm p-8 text-center font-['Jersey_15',_sans-serif] text-[#F7FCE9] shadow-md border
-=======
-        <div className={`flex items-center justify-center h-screen px-4 
-            ${difficulty === 'rubens' ? 'bg-gradient-to-br from-[#300000] to-[#1a0000] text-red-200' : 'bg-[#080e08] text-[#c7f14f]'}`}>
-            <div className={`rounded-lg w-full max-w-sm p-8 text-center shadow-md border
->>>>>>> db3504df613b6201a9415b1a5889c6e7bad4df8f
                     ${difficulty === 'rubens'
                     ? 'border-red-600 bg-[#1a0000]'
                     : 'border-[#c7f14f] bg-[#132513]'}`
             }>
-<<<<<<< HEAD
                 <h1 className="text-3xl text-center text-[#F7FCE9] font-bold uppercase mb-6 tracking-wider">Resultado</h1>
                 <div className="grid grid-cols-2 gap-6 mb-8 font-['Jersey_15',_sans-serif] text-3xl">
                     <div>
                         <p className=" text-center text-[#F7FCE9] mb-2">Pontuação:</p>
                         <p className={`  
-=======
-                <h1 className="text-5xl font-bold uppercase mb-6 tracking-wider">Resultado</h1>
-                <div className="flex justify-between mb-8">
-                    <div>
-                        <p className="text-2xl font-semibold mb-2">Pontuação:</p>
-                        <p className={`text-2xl font-bold 
->>>>>>> 1a234e7c1a8f1b82bf88ed885fa72fe6c92e1baf
                         ${difficulty === 'rubens' ? 'text-red-400 drop-shadow-[0_0_6px_#ff0000]' : 'text-[#7ba64c]'}`}>
                             {updatedScore}
                         </p>
                     </div>
                     <div>
-<<<<<<< HEAD
                         <p className="text-[#F7FCE9] mb-2">Acertos:</p>
                         <p className={`
-=======
-                        <p className="text-2xl font-semibold mb-2">Acertos:</p>
-                        <p className={`text-2xl font-bold
->>>>>>> 1a234e7c1a8f1b82bf88ed885fa72fe6c92e1baf
                             ${difficulty === 'rubens' ? 'text-red-400 drop-shadow-[0_0_6px_#ff0000]' : 'text-[#7ba64c]'}`}>
                             {`${correctAnswers}/${lengthQuestions}`}
                         </p>
                     </div>
                     <div>
-<<<<<<< HEAD
                         <p className="text-center text-[#F7FCE9] mb-2">Dificuldade:</p>
-=======
-                        <p className="text-2xl font-semibold mb-2">Dificuldade:</p>
->>>>>>> 1a234e7c1a8f1b82bf88ed885fa72fe6c92e1baf
                         <p className=
                             {`${difficulty === 'easy' ? 'text-[#4CAF50]' :
                                 difficulty === 'medium' ? 'text-[#FFC107]' :
@@ -64,23 +41,14 @@ function Score() {
                         </p>
                     </div>
                     <div>
-<<<<<<< HEAD
                         <p className="text-center text-[#F7FCE9] mb-2">Tempo Total:</p>
                         <p className="text-[#f7e94c]">{time}s</p>
-=======
-                        <p className="text-2xl font-semibold mb-2">Tempo Total:</p>
-                        <p className="text-2xl font-bold text-[#f7e94c]">{time}s</p>
->>>>>>> 1a234e7c1a8f1b82bf88ed885fa72fe6c92e1baf
                     </div>
                 </div>
 
                 <button
                     onClick={() => navigate("/")}
-<<<<<<< HEAD
                     className={`w-full text-3xl font-['Jersey_15',_sans-serif] cursor-pointer px-6 py-2 rounded-lg transition-all duration-300 
-=======
-                    className={`w-full font-semibold cursor-pointer px-3 py-2 rounded-lg transition-all duration-300 
->>>>>>> 1a234e7c1a8f1b82bf88ed885fa72fe6c92e1baf
                         ${difficulty === 'rubens'
                             ? 'bg-red-600 hover:bg-red-700 text-white shadow-lg shadow-red-500/20'
                             : 'bg-[#7ba64c] hover:bg-[#91c659] text-[#F7FCE9]'}`}

@@ -60,7 +60,7 @@ function Home() {
                     value={selectedDifficulty}
                     onChange={handleDifficultyChange}
 
-                    className={`appearance-none border-[2px] bg-[#6A8816] w-full text-[#F7FCE9] text-center text-2xl font-['Jersey_15',_sans-serif] px-3 py-2 p-3 mb-8 rounded-xl focus:outline-none transition-all duration-200
+                    className={`appearance-none border-[2px] bg-[#6A8816] w-full !text-[#F7FCE9] text-center text-2xl font-['Jersey_15',_sans-serif] px-3 py-2 p-3 mb-8 rounded-xl focus:outline-none transition-all duration-200
             ${selectedDifficulty === 'rubens'
                             ? 'bg-[#300000] border-red-500 text-red-100 focus:ring-2 focus:ring-red-600'
                             : 'bg-[#1e2b1e] hover:bg-[#91c659]border border-[#c7f14f] text-[#f4ff9b] focus:ring-2 focus:ring-[#c7f14f]'

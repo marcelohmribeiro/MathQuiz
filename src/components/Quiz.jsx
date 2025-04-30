@@ -176,7 +176,7 @@ function Quiz() {
     // Verifica se a dificuldade, questões e pergunta atual estão definidas
     if (!difficulty || !questions || !currentQuestion || time === null) return null
     return (
-        <div className={`flex items-center justify-center h-screen bg-[#111603] px-4 ${difficulty === 'rubens' ? 'bg-gradient-to-br from-[#300000] to-[#1a0000] text-red-200' : 'bg-[#050805]'}`}>
+        <div className={`flex items-center justify-center h-screen bg-gradient-to-br from-[#050805] to-[#0c1c0c] px-4 ${difficulty === 'rubens' ? 'bg-gradient-to-br from-[#300000] to-[#1a0000] text-red-200' : 'bg-[#050805]'}`}>
             <div className="absolute top-4 right-4">
                 <button
                     onClick={toggleSound}
@@ -194,7 +194,7 @@ function Quiz() {
                 <div className={`flex justify-between px-6 py-3 rounded-t-2xl border-[4px] border-b-0
                     ${difficulty === 'rubens'
                         ? 'bg-[#3d0000] border-[#ff4c4c]'
-                        : 'bg-[#232D07] border-[#C0E850]'
+                        : 'bg-[#132513] border-[#C0E850]'
                     }`}
                 >
                     <h2 className="text-2xl !text-[#F7FCE9] uppercase font-['Jersey_15',_sans-serif] ">
@@ -215,7 +215,7 @@ function Quiz() {
                 <div className={`rounded-b-2xl p-6 text-center border-[4px] border-t-0
                     ${difficulty === 'rubens'
                         ? 'border-[#ff4c4c] bg-[#3d0000]'
-                        : 'border-[#c7f14f] bg-[#232D07]'
+                        : 'border-[#c7f14f] bg-[#132513]'
                     }`}
                 >
                     <p className="text-4xl text-[#F7FCE9] mb-4 font-['Jersey_15',_sans-serif]">
@@ -258,8 +258,8 @@ function Quiz() {
                             onClick={handleShowHint}
                             className={`${difficulty === 'rubens'
                                 ? 'bg-[#ff4c4c] hover:bg-[#ff1a1a] text-white'
-                                : 'bg-[#f7e94c] hover:bg-[#fff000] text-black'
-                                } cursor-pointer mt-4 font-semibold text-sm px-4 py-2 rounded transition-colors duration-200`}
+                                : 'bg-[#ffed2b] hover:bg-[#ffed2bb7] text-black'
+                                } cursor-pointer mt-4 font-semibold text-sm px-4 py-2 rounded-lg transition-colors duration-200`}
                         >
                             {difficulty === 'hard' ? "Mostrar dica (-5 pontos)" : "Mostrar dica (-3 pontos)"}
                         </button>

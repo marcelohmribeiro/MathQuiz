@@ -7,12 +7,12 @@ function Score() {
 
     return (
         //estilzacao quase completa, se quiser melhorar algo, so pedir
-        <div className={`flex items-center justify-center h-screen px-4 bg-[#111603]
+        <div className={`flex items-center justify-center h-screen px-4 bg-gradient-to-br from-[#050805] to-[#0c1c0c]
             ${difficulty === 'rubens' ? 'bg-gradient-to-br from-[#2e0505] via-[#5a0303] to-[#120202] text-red-100' : 'bg-[#080e08] text-[#c7f14f]'}`}>
             <div className={`border-[6px] rounded-2xl w-full max-w-sm p-8 text-center font-['Jersey_15',_sans-serif] text-[#F7FCE9] shadow-md border
                     ${difficulty === 'rubens'
                     ? 'border-red-600 bg-[#1a0000]'
-                    : '!border-[#C0E850] bg-[#232D07]'}`
+                    : '!border-[#C0E850] bg-[#132513]'}`
             }>
                 <h1 className="text-3xl text-center text-[#F7FCE9] font-bold uppercase mb-6 tracking-wider">Resultado</h1>
                 <div className="grid grid-cols-2 gap-6 mb-8 font-['Jersey_15',_sans-serif] text-3xl">

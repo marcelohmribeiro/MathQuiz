@@ -53,7 +53,7 @@ function Quiz() {
             case 'medium':
                 return 35
             default:
-                return 45
+                return 500
         }
     }
     // Timer
@@ -176,13 +176,13 @@ function Quiz() {
     // Verifica se a dificuldade, questões e pergunta atual estão definidas
     if (!difficulty || !questions || !currentQuestion || time === null) return null
     return (
-        <div className={`flex items-center justify-center h-screen px-4 ${difficulty === 'rubens' ? 'bg-gradient-to-br from-[#300000] to-[#1a0000] text-red-200' : 'bg-[#050805]'}`}>
+        <div className={`flex items-center justify-center h-screen bg-[#111603] px-4 ${difficulty === 'rubens' ? 'bg-gradient-to-br from-[#300000] to-[#1a0000] text-red-200' : 'bg-[#050805]'}`}>
             <div className="absolute top-4 right-4">
                 <button
                     onClick={toggleSound}
-                    className="bg-gray-800 text-white px-3 py-1 rounded text-xs hover:bg-gray-700 transition"
+                    className="bg-gray-800 !text-F7FCE9 px-3 py-1 rounded text-xs hover:bg-gray-700 transition"
                 >
-                    Som: {isSoundEnabled ? "🔊 Ligado" : "🔇 Desligado"}
+                    Som: {isSoundEnabled ? "Ligado" : "Desligado"}
                 </button>
             </div>
             <div className="w-full max-w-3xl max-h-[90vh] overflow-y-auto hide-scrollbar">
@@ -197,8 +197,8 @@ function Quiz() {
                         : 'bg-[#172b17] border-[#c7f14f]'
                     }`}
                 >
-                    <h2 className="text-sm uppercase">
-                        Dificuldade: <span className={`capitalize font-bold 
+                    <h2 className="text-2xl !text-[#F7FCE9] uppercase font-['Jersey_15',_sans-serif] ">
+                        Dificuldade: <span className={`capitalize text-4px
                             ${difficulty === 'easy' ? 'text-[#4CAF50]' :
                                 difficulty === 'medium' ? 'text-[#f7e94c]' :
                                     difficulty === 'hard' ? 'text-[#F44336]' :
@@ -207,7 +207,7 @@ function Quiz() {
                             {difficulty === 'easy' ? 'Facíl' : difficulty === 'medium' ? 'Médio' : difficulty === 'hard' ? 'Difícil' : '💀Rubens💀'}
                         </span>
                     </h2>
-                    <p className="text-sm">
+                    <p className="text-2xl text-[#F7FCE9] font-['Jersey_15',_sans-serif]">
                         Tempo: <span className={`${time <= 10 ? 'text-[#ff4c4c]' : difficulty === 'rubens' ? 'text-[#ff9999]' : 'text-[#f7e94c]'}`}>{time}s</span>
                     </p>
                 </div>
@@ -218,7 +218,7 @@ function Quiz() {
                         : 'border-[#c7f14f] bg-[#172b17]'
                     }`}
                 >
-                    <p className="text-sm mb-4">
+                    <p className="text-3xl text-[#F7FCE9] mb-4 font-['Jersey_15',_sans-serif]">
                         Pontuação: <span className={`${difficulty === 'rubens' ? 'text-[#ff4c4c]' : 'text-[#f7e94c]'}`}>{score}</span>
                     </p>
                     
@@ -229,7 +229,7 @@ function Quiz() {
                             style={{ width: `${progress}%` }}
                         />
                     </div>
-                    <h3 className="text-base mb-6 text-white">{currentQuestion.question}</h3>
+                    <h3 className="text-3xl mb-6 !text-[#F7FCE9] font-['Jersey_15',_sans-serif]">{currentQuestion.question}</h3>
                     {currentQuestion.image && (
                         <img
                             src={currentQuestion.image}
@@ -237,12 +237,12 @@ function Quiz() {
                             className="mb-6 w-full max-w-xs mx-auto rounded-lg"
                         />
                     )}
-                    <ul className="space-y-3 mb-4">
+                    <ul className="space-y-3 mb-4 ">
                         {currentQuestion.options.map((option, i) => (
                             <li
                                 key={i}
                                 onClick={() => handleAnswer(option)}
-                                className={`cursor-pointer font-semibold rounded px-4 py-2 text-sm transition-all duration-200
+                                className={`cursor-pointer text-[#F7FCE9] text-xl font-['Jersey_15',_sans-serif] rounded px-4 py-2 text-sm transition-all duration-200
                                     ${isDisabled
                                         ? difficulty === 'rubens' ? 'bg-[#7a1d1d]' : 'bg-[#5e7840]'
                                         : difficulty === 'rubens' ? 'bg-[#d32f2f] hover:bg-[#b71c1c]' : 'bg-[#7ba64c] hover:bg-[#688c3e]'

@@ -191,15 +191,15 @@ function Quiz() {
                         {<HintRubens hint={currentQuestion.hint} />}
                     </div>
                 )}
-                <div className={`flex justify-between px-6 py-3 rounded-t-lg border border-b-0
+                <div className={`flex justify-between px-6 py-3 rounded-t-2xl border-[4px] border-b-0
                     ${difficulty === 'rubens'
                         ? 'bg-[#3d0000] border-[#ff4c4c]'
-                        : 'bg-[#172b17] border-[#c7f14f]'
+                        : 'bg-[#232D07] border-[#C0E850]'
                     }`}
                 >
                     <h2 className="text-2xl !text-[#F7FCE9] uppercase font-['Jersey_15',_sans-serif] ">
                         Dificuldade: <span className={`capitalize text-4px
-                            ${difficulty === 'easy' ? 'text-[#4CAF50]' :
+                            ${difficulty === 'easy' ? 'text-[#C0E850]' :
                                 difficulty === 'medium' ? 'text-[#f7e94c]' :
                                     difficulty === 'hard' ? 'text-[#F44336]' :
                                         'text-[#ff4c4c]'
@@ -212,20 +212,20 @@ function Quiz() {
                     </p>
                 </div>
 
-                <div className={`rounded-b-lg p-6 text-center border
+                <div className={`rounded-b-2xl p-6 text-center border-[4px] border-t-0
                     ${difficulty === 'rubens'
                         ? 'border-[#ff4c4c] bg-[#3d0000]'
-                        : 'border-[#c7f14f] bg-[#172b17]'
+                        : 'border-[#c7f14f] bg-[#232D07]'
                     }`}
                 >
-                    <p className="text-3xl text-[#F7FCE9] mb-4 font-['Jersey_15',_sans-serif]">
+                    <p className="text-4xl text-[#F7FCE9] mb-4 font-['Jersey_15',_sans-serif]">
                         Pontuação: <span className={`${difficulty === 'rubens' ? 'text-[#ff4c4c]' : 'text-[#f7e94c]'}`}>{score}</span>
                     </p>
                     
-                    <div className={`w-full h-3 rounded-full mb-6 ${difficulty === 'rubens' ? 'bg-[#4d0000]' : 'bg-[#1f2d1f]'}`}
+                    <div className={`w-full h-3 rounded-xl mb-6 ${difficulty === 'rubens' ? 'bg-[#4d0000]' : 'bg-[#1f2d1f]'}`}
                     >
                         <div
-                            className={`${difficulty === 'rubens' ? 'bg-[#ff4c4c]' : 'bg-[#7ba64c]'} h-full transition-all duration-300`}
+                            className={`${difficulty === 'rubens' ? 'bg-[#ff4c4c]' : 'bg-[#c7f14f]'} h-full transition-all duration-300`}
                             style={{ width: `${progress}%` }}
                         />
                     </div>
@@ -242,10 +242,11 @@ function Quiz() {
                             <li
                                 key={i}
                                 onClick={() => handleAnswer(option)}
-                                className={`cursor-pointer text-[#F7FCE9] text-xl font-['Jersey_15',_sans-serif] rounded px-4 py-2 text-sm transition-all duration-200
+                                //estilizacao botoes de respostas
+                                className={`cursor-pointer text-[#F7FCE9] text-xl border-[2px] border-[#C0E850] font-['Jersey_15',_sans-serif] rounded-xl px-4 py-2 transition-all duration-200
                                     ${isDisabled
-                                        ? difficulty === 'rubens' ? 'bg-[#7a1d1d]' : 'bg-[#5e7840]'
-                                        : difficulty === 'rubens' ? 'bg-[#d32f2f] hover:bg-[#b71c1c]' : 'bg-[#7ba64c] hover:bg-[#688c3e]'
+                                        ? difficulty === 'rubens' ? 'bg-[#7a1d1d]' : 'bg-[#6A8816]'
+                                        : difficulty === 'rubens' ? 'bg-[#d32f2f] hover:bg-[#b71c1c]' : 'bg-[#6A8816] hover:bg-[#6a881686]'
                                     }`}
                             >
                                 {option}

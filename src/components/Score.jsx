@@ -19,15 +19,15 @@ function Score() {
                     <div>
                         <p className=" text-center text-[#F7FCE9] mb-2">Pontuação:</p>
                         <p className={`  
-                        ${difficulty === 'rubens' ? 'text-red-400 drop-shadow-[0_0_6px_#ff0000]' : 'text-[#7ba64c]'}`}>
-                            <p className="!text-[#C0E850]">{updatedScore}</p>
+                        ${difficulty === 'rubens' ? 'text-red-500 drop-shadow-[0_0_6px_#ff0000]' : 'text-[#C0E850]'}`}>
+                            <p>{updatedScore}</p>
                         </p>
                     </div>
                     <div>
                         <p className="text-[#F7FCE9] mb-2">Acertos:</p>
                         <p className={`
-                            ${difficulty === 'rubens' ? 'text-red-400 drop-shadow-[0_0_6px_#ff0000]' : 'text-[#7ba64c]'}`}>
-                            <p className="!text-[#C0E850]">{`${correctAnswers}/${lengthQuestions}`}</p>
+                            ${difficulty === 'rubens' ? 'text-red-500 drop-shadow-[0_0_6px_#ff0000]' : 'text-[#C0E850]'}`}>
+                            <p>{`${correctAnswers}/${lengthQuestions}`}</p>
                         </p>
                     </div>
                     <div>
@@ -43,7 +43,9 @@ function Score() {
                     </div>
                     <div>
                         <p className="text-center text-[#F7FCE9] mb-2">Tempo Total:</p>
-                        <p className="!text-[#C0E850]">{time}s</p>
+                        <p className={`  
+                        ${difficulty === 'rubens' ? 'text-red-500 drop-shadow-[0_0_6px_#ff0000]' : 'text-[#C0E850]'}`}>
+                            {time}s</p>
                     </div>
                 </div>
 

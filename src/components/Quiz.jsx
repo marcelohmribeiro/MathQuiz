@@ -47,13 +47,13 @@ function Quiz() {
     function initialTime() {
         switch (difficulty) {
             case 'rubens':
-                return 20
+                return 500
             case 'hard':
                 return 25
             case 'medium':
                 return 35
             default:
-                return 500
+                return 50
         }
     }
     // Timer
@@ -243,10 +243,10 @@ function Quiz() {
                                 key={i}
                                 onClick={() => handleAnswer(option)}
                                 //estilizacao botoes de respostas
-                                className={`cursor-pointer text-[#F7FCE9] text-xl border-[2px] border-[#C0E850] font-['Jersey_15',_sans-serif] rounded-xl px-4 py-2 transition-all duration-200
+                                className={`cursor-pointer text-[#F7FCE9] text-xl border-[2px] font-['Jersey_15',_sans-serif] rounded-xl px-4 py-2 transition-all duration-200
                                     ${isDisabled
-                                        ? difficulty === 'rubens' ? 'bg-[#7a1d1d]' : 'bg-[#6A8816]'
-                                        : difficulty === 'rubens' ? 'bg-[#d32f2f] hover:bg-[#b71c1c]' : 'bg-[#6A8816] hover:bg-[#6a881686]'
+                                        ? difficulty === 'rubens' ? 'bg-[#7a1d1d] border-[#ff4c4c]' : 'bg-[#6A8816]'
+                                        : difficulty === 'rubens' ? 'bg-[#b63939] hover:bg-[#b71c1c] border-[#ff4c4c]' : 'bg-[#6A8816] border-[#C0E850] hover:bg-[#6a881686]'
                                     }`}
                             >
                                 {option}

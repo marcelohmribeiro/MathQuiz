@@ -176,7 +176,7 @@ function Quiz() {
     // Verifica se a dificuldade, questões e pergunta atual estão definidas
     if (!difficulty || !questions || !currentQuestion || time === null) return null
     return (
-        <div className={`flex items-center justify-center h-screen bg-gradient-to-br from-[#050805] to-[#0c1c0c] px-4 ${difficulty === 'rubens' ? 'bg-gradient-to-br from-[#300000] to-[#1a0000] text-red-200' : 'bg-[#050805]'}`}>
+        <div className={`flex items-center justify-center h-screen bg-gradient-to-br from-[#050805] to-[#0c1c0c] px-4 ${difficulty === 'rubens' ? 'bg-gradient-to-br from-[#2e0505] via-[#5a0303] to-[#120202] text-red-200' : 'bg-[#050805]'}`}>
             <div className="absolute top-4 right-4">
                 <button
                     onClick={toggleSound}

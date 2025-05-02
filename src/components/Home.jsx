@@ -32,7 +32,7 @@ function Home() {
     return (
         <div className={`flex flex-col items-center justify-center h-screen px-4 transition-colors duration-500
             ${selectedDifficulty === 'rubens'
-                ? 'bg-gradient-to-br from-[#300000] to-[#1a0000] text-red-200'
+                ? 'bg-gradient-to-br from-[#2e0505] via-[#5a0303] to-[#120202] text-red-200'
                 : 'bg-gradient-to-br from-[#050805] to-[#0c1c0c] text-[#c7f14f]'
             }`}>
             <h1

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import rubens from "./img/rubens.jpeg"
+import rubens from "../img/rubens.jpeg"
 
 function HintRubens({ hint }) {
     return (
@@ -14,7 +14,7 @@ function HintRubens({ hint }) {
                 alt="Rubens"
                 className="w-24 h-24 object-cover rounded-full border-4 border-[#c7f14f]"
             />
-            <div className="bg-white text-black px-4 py-3 rounded-lg shadow-md max-w-xs">
+            <div className="bg-white text-black text-2xl px-4 py-3 rounded-lg shadow-md max-w-xs">
                 <p>{hint}</p>
             </div>
         </motion.div>

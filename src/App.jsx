@@ -1,7 +1,7 @@
 // Pages
-import Home from './components/Home'
-import Quiz from './components/Quiz'
-import Score from './components/Score'
+import Home from './components/pages/Home'
+import Quiz from './components/pages/Quiz'
+import Score from './components/pages/Score'
 // Libraries
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 function App() {

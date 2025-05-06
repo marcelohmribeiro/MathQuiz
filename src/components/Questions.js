@@ -212,7 +212,7 @@ export const questions = {
     },
     {
       question: "De acordo com o gráfico da função f(x) = x² - 2x - 3, qual é o valor mínimo de f(x)?",
-      image: "grafico1.png",
+      image: grafico1,
       options: ["-4", "-3", "-1", "0"],
       answer: "-4"
     },

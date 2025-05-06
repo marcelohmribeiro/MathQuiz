@@ -49,7 +49,7 @@ function Quiz() {
             case 'rubens':
                 return 20
             case 'hard':
-                return 25
+                return 5
             case 'medium':
                 return 30
             default:
@@ -245,19 +245,24 @@ function Quiz() {
                             let styles = ''
 
                             if (isDisabled) {
-                                if (selectedOption === option) {
-                                    if (option === currentQuestion.answer) {
-                                        styles = 'bg-[#6F9D26] border-[#6F9D26]' // Acertou
-                                    } else {
-                                        styles = 'bg-[#b94c4c] border-[#b94c4c]' // Errou
-                                    }
+                                if (time <= 0) {
+                                    styles = 'bg-[#7a6f00] border-[#7a6f00]'
                                 } else {
-                                    // Demais opções após resposta
-                                    styles = difficulty === 'rubens'
-                                        ? 'bg-[#7a1d1d] border-[#7a1d1d]' // vermelho escuro
-                                        : 'bg-[#4e6411] border-[#4e6411]' // verde escuro
+                                    if (selectedOption === option) {
+                                        if (option === currentQuestion.answer) {
+                                            styles = 'bg-[#6F9D26] border-[#6F9D26]' // Acertou
+                                        } else {
+                                            styles = 'bg-[#b94c4c] border-[#b94c4c]' // Errou
+                                        }
+                                    } else {
+                                        // Demais opções após resposta
+                                        styles = difficulty === 'rubens'
+                                            ? 'bg-[#7a1d1d] border-[#7a1d1d]' // vermelho escuro
+                                            : 'bg-[#4e6411] border-[#4e6411]' // verde escuro
+                                    }
                                 }
-                            } else {
+                            }
+                            else {
                                 // Antes da resposta
                                 styles = difficulty === 'rubens'
                                     ? 'bg-[#b63939] hover:bg-[#b71c1c] border-[#ff4c4c]' // tema rubens

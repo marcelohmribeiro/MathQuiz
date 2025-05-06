@@ -31,7 +31,7 @@ export const questions = {
       question: "Se A = {1, 2, 3} e B = {2, 3, 4}, então A ∪ B é:",
       options: ["{1, 2, 3}", "{1, 2, 3, 4}", "{2, 3}", "{1, 3}"],
       answer: "{1, 2, 3, 4}",
-      hint: "A união de dois conjuntos inclui todos os elementos de ambos os conjuntos, sem repetição."
+      hint: "A união de dois conjuntos inclui todos os elementos de ambos os conjuntos."
     },
     {
       question: "O conjunto {x ∈ ℕ | x < 5} é igual a:",
@@ -67,7 +67,6 @@ export const questions = {
       question: "Quantos elementos tem o conjunto A = {1, 2, 3, 4}?",
       options: ["3", "4", "5", "6"],
       answer: "4",
-      hint: "O número de elementos de um conjunto é a sua cardinalidade."
     },
     {
       question: "A interseção de {a, b} e {b, c} é:",
@@ -79,7 +78,7 @@ export const questions = {
       question: "A união de {1, 2} e {2, 3} é:",
       options: ["{1, 2, 3}", "{1, 2}", "{2, 3}", "{1, 3}"],
       answer: "{1, 2, 3}",
-      hint: "Na união, você inclui todos os elementos de ambos os conjuntos sem repetições."
+      hint: "Na união, você inclui todos os elementos de ambos os conjuntos."
     }
   ],
   // Questões Médias
@@ -302,7 +301,7 @@ export const questions = {
       answer: "Todas as anteriores"
     },
     {
-      question: "Qual gráfico representa a função f(x) = x² - 4?",
+      question: "Com base no gráfico abaixo da função f(x) = x² - 4x + 3, qual das alternativas descreve corretamente seu comportamento?",
       options: [
         "Parábola com vértice em (0, -4) e concavidade para cima",
         "Reta decrescente passando pela origem",
@@ -311,7 +310,7 @@ export const questions = {
       ],
       answer: "Parábola com vértice em (0, -4) e concavidade para cima",
       image: grafico7
-    },
+    },    
     {
       question: "O gráfico da função f(x) = √x - 1 inicia em:",
       options: [

@@ -60,12 +60,11 @@ function Home() {
                     value={selectedDifficulty}
                     onChange={handleDifficultyChange}
 
-                    className={`appearance-none border-[2px] bg-[#6A8816] w-full !text-[#F7FCE9] text-center text-2xl px-3 py-2 p-3 mb-8 rounded-xl focus:outline-none transition-all duration-200
+                    className={`appearance-none border-[2px] bg-[#6A8816] w-full !text-[#F7FCE9] !text-center text-2xl px-3 py-2 p-3 mb-8 rounded-xl focus:outline-none transition-all duration-200
             ${selectedDifficulty === 'rubens'
                             ? 'bg-[#300000] border-red-500 text-red-100 focus:ring-2 focus:ring-red-600'
                             : 'bg-[#1e2b1e] hover:bg-[#91c659]border border-[#c7f14f] text-[#f4ff9b] focus:ring-2 focus:ring-[#c7f14f]'
                         }`}
-
                 >
                     {difficulties.map((difficulty) => (
                         <option key={difficulty.value} value={difficulty.value}>
@@ -77,11 +76,10 @@ function Home() {
                     onClick={handlePlay}
 
                     className={`hover:bg-[#6A8816] bg-[##C0E850] text-[#F7FCE9] cursor-pointer text-3xl px-3 py-3 rounded-xl w-full transition-all duration-200
-            ${selectedDifficulty === 'rubens'
+                        ${selectedDifficulty === 'rubens'
                             ? 'bg-red-600 border-red-500 hover:bg-red-700 text-white shadow-red-500/50'
-                            : 'bg-[#91c659] hover:bg-[#7ba64c] border-[#C0E850] text-black shadow-[#c7f14f]/30'
+                            : 'bg-[#7dad40] hover:bg-[#6b9738] border-[#bde05e] text-white shadow-[#bde05e]/30'
                         }`}
-
                 >
                     Jogar
                 </button>

@@ -65,9 +65,10 @@ function Quiz() {
         if (difficulty === 'rubens' && !showIntro) return
         if (time === null) return
         if (time == 3) {
+            stopSound()
             playSound(relogio)
         }
-        if (time == 0) {
+        if (time === 0) {
             setFeedback("⏰ Tempo esgotado! ⏰")
             setIsDisabled(true)
             const lengthQuestions = questions.length

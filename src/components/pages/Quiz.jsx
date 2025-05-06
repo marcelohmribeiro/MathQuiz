@@ -6,7 +6,6 @@ import errou from "../sounds/errou.mp3"
 // Components
 import IntroRubens from "../layout/IntroRubens"
 import HintRubens from "../layout/HintRubens"
-import { style } from "framer-motion/client"
 
 function Quiz() {
     const navigate = useNavigate()
@@ -211,11 +210,6 @@ function Quiz() {
                             {difficulty === 'easy' ? 'Facíl' : difficulty === 'medium' ? 'Médio' : difficulty === 'hard' ? 'Difícil' : '💀Rubens💀'}
                         </span>
                     </h2>
-                    <div>
-                        {feedback && (
-                            <p className="mt-2 text-[#f7e94c] text-[20px] animate-pulse">{feedback}</p>
-                        )}
-                    </div>
                     <p className="text-2xl text-[#F7FCE9]">
                         Tempo: <span className={`${time <= 10 ? 'text-[#ff4c4c]' : difficulty === 'rubens' ? 'text-[#ff9999]' : 'text-[#f7e94c]'}`}>{time}s</span>
                     </p>
@@ -290,6 +284,9 @@ function Quiz() {
                         >
                             {difficulty === 'medium' ? "Mostrar dica (-5 pontos)" : "Mostrar dica (-3 pontos)"}
                         </button>
+                    )}
+                    {feedback && (
+                        <p className="mt-2 text-[#f7e94c] text-[20px] animate-pulse">{feedback}</p>
                     )}
                 </div>
             </div>

@@ -55,7 +55,8 @@ function Score() {
                         <p className="text-center text-[#F7FCE9] mb-2">Tempo Total:</p>
                         <p className={`  
                         ${difficulty === 'rubens' ? 'text-red-500 drop-shadow-[0_0_6px_#ff0000]' : 'text-[#C0E850]'}`}>
-                            {timer()}s</p>
+                            {timer()}
+                        </p>
                     </div>
                 </div>
 

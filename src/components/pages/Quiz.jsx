@@ -65,7 +65,6 @@ function Quiz() {
         if (difficulty === 'rubens' && !showIntro) return
         if (time === null) return
         if (time == 3) {
-            stopSound()
             playSound(relogio)
         }
         if (time === 0) {

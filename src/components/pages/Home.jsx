@@ -2,7 +2,6 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { questions } from "../Questions"
 import qrCode from "../img/qrcodeMath.png"
-import { s, span } from "framer-motion/client"
 
 function Home() {
     const navigate = useNavigate()

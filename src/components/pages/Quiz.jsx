@@ -81,14 +81,17 @@ function Quiz() {
                         difficulty
                     }
                 })
-            }, 1500)
+            }, 2000)
         }
         const timer = setInterval(() => {
+            if (time === 0) {
+                return
+            }
             setTime(prev => prev - 1)
         }, 1000)
         return () => clearInterval(timer)
     }, [time])
-
+    // Timer para o tempo total
     useEffect(() => {
         const timer = setInterval(() => {
             setTimeElapsed(prev => prev + 1)
@@ -115,7 +118,6 @@ function Quiz() {
         setIsSoundEnabled(prev => !prev)
         localStorage.setItem('sound', !isSoundEnabled)
     }
-
     // Progresso do quiz
     function handleAnswer(selectedOption) {
         if (isDisabled) return
@@ -174,7 +176,6 @@ function Quiz() {
             setScore(prev => prev - 3)
         }
     }
-
     if (difficulty === 'rubens' && !showIntro) {
         return <IntroRubens handleFinish={() => setShowIntro(true)} />
     }

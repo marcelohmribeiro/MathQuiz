@@ -49,7 +49,7 @@ function Quiz() {
             case 'rubens':
                 return 20
             case 'hard':
-                return 5
+                return 25
             case 'medium':
                 return 30
             default:

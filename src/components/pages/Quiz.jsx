@@ -3,6 +3,8 @@ import { useState, useEffect } from "react"
 // Sounds
 import peido from "../sounds/peido.mp3"
 import errou from "../sounds/errou.mp3"
+import palmas from "../sounds/palmas.mp3"
+import relogio from "../sounds/relogio.mp3"
 // Components
 import IntroRubens from "../layout/IntroRubens"
 import HintRubens from "../layout/HintRubens"
@@ -60,7 +62,10 @@ function Quiz() {
     useEffect(() => {
         if (difficulty === 'rubens' && !showIntro) return
         if (time === null) return
-        if (time <= 0) {
+        if (time == 3) {
+            playSound(relogio)
+        }
+        if (time == 0) {
             setFeedback("⏰ Tempo esgotado! ⏰")
             setIsDisabled(true)
             const lengthQuestions = questions.length
@@ -131,6 +136,7 @@ function Quiz() {
             updatedScore += 10
             setScore(updatedScore)
             setFeedback("Acertou! 🎉")
+            playSound(palmas)
             setProgress(((currentIndex + 1) / questions.length) * 100)
             setCurrentIndex(currentIndex + 1)
             setTime(initialTime())

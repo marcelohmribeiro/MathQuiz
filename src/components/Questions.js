@@ -155,54 +155,66 @@ export const questions = {
   // Questões Dificieis
   hard: [
     {
-      question: "Se A = {1, 2, 3}, B = {2, 3, 4}, e C = {3, 4, 5}, qual é (A ∩ B) ∪ C?",
-      options: ["{1, 2, 3, 4, 5}", "{2, 3, 4, 5}", "{3, 4, 5}", "{1, 2, 3}"],
-      answer: "{2, 3, 4, 5}"
+      question: "Dado A = {1, 2, 3, 4} e B = {3, 4, 5, 6}, qual é o conjunto A ∩ B?",
+      options: ["{1, 2}", "{5, 6}", "{3, 4}", "{1, 2, 3, 4, 5, 6}"],
+      answer: "{3, 4}",
+      hint: "Considere os elementos que estão presentes em A e em B."
     },
     {
-      question: "Se n(A) = 4 e n(B) = 3, quantos elementos terá A × B?",
-      options: ["7", "12", "3", "9"],
-      answer: "12"
+      question: "Se U = {1, 2, 3, 4, 5, 6} e A = {2, 4, 6}, qual é o complemento de A em relação a U?",
+      options: ["{2, 4, 6}", "{1, 3, 5}", "{1, 2, 3}", "{3, 5, 6}"],
+      answer: "{1, 3, 5}",
+      hint: "O complemento de A em U são os elementos que estão em U, mas não em A."
     },
     {
-      question: "Em um grupo de 100 pessoas: 60 gostam de A, 50 gostam de B e 30 gostam de ambos. Quantas gostam apenas de A?",
-      options: ["30", "60", "20", "40"],
-      answer: "30"
+      question: "O conjunto {x ∈ ℕ | x² < 20} é:",
+      options: ["{1, 2, 3, 4}", "{1, 2, 3}", "{1, 2, 3, 4, 5}", "{1, 2, 3, 4, 5, 6}"],
+      answer: "{1, 2, 3, 4}",
+      hint: "Verifique quais números naturais têm o quadrado menor que 20."
     },
     {
-      question: "Quantos subconjuntos possui um conjunto com 5 elementos?",
-      options: ["10", "25", "32", "16"],
-      answer: "32"
+      question: "Em uma escola, 20 alunos gostam de futebol, 15 de vôlei e 5 gostam de ambos. Quantos alunos gostam apenas de futebol?",
+      options: ["15", "10", "5", "20"],
+      answer: "15",
+      hint: "Subtraia os que gostam de ambos dos que gostam de futebol."
     },
     {
-      question: "A relação R = {(1,2), (2,3)} em A = {1,2,3} é transitiva?",
+      question: "Considere A = {x ∈ ℕ | x < 5} e B = {2, 4, 6}. Qual é A ∪ B?",
+      options: ["{0, 1, 2, 3, 4, 6}", "{2, 4}", "{0, 1, 3, 6}", "{2, 4, 6}"],
+      answer: "{0, 1, 2, 3, 4, 6}"
+    },
+    {
+      question: "A relação R = {(1,1), (2,2), (3,3)} em A = {1, 2, 3} é:",
+      options: ["Reflexiva", "Simétrica", "Transitiva", "Todas as anteriores"],
+      answer: "Todas as anteriores"
+    },
+    {
+      question: "Considere os pares R = {(1, 2), (2, 3), (1, 3)}. Essa relação é transitiva?",
       options: ["Sim", "Não"],
-      answer: "Não"
+      answer: "Sim"
     },
     {
-      question: "Se R é simétrica e contém (2, 5), então também contém:",
-      options: ["(5, 2)", "(2, 2)", "(5, 5)", "(2, 3)"],
-      answer: "(5, 2)"
+      question: "Em uma relação de amizade, se A é amigo de B e B é amigo de A, então a relação é:",
+      options: ["Reflexiva", "Antissimétrica", "Simétrica", "Transitiva"],
+      answer: "Simétrica"
     },
     {
-      question: "Uma relação R em A = {1,2} com todos os pares do tipo (a,b) é dita:",
-      options: ["Total", "Vazia", "Universal", "Reflexiva"],
-      answer: "Universal"
+      question: "Qual das seguintes representações mostra que uma relação é não reflexiva?",
+      options: ["(1, 1) está presente", "(2, 2) não está presente", "Todos os pares são do tipo (a, a)", "A relação é vazia"],
+      answer: "A relação é vazia",
+      hint: "Uma relação reflexiva tem pares do tipo (a, a)."
     },
     {
-      question: "A matriz de uma relação R entre A = {1, 2} e B = {3, 4}, com R = {(1, 3), (2, 4)}, será:",
-      options: [
-        "Apenas a diagonal está preenchida",
-        "A matriz tem marcações nas posições (1, 1) e (2, 2)",
-        "A matriz tem marcações nas posições (1, 3) e (2, 4)",
-        "As marcações estão fora da diagonal principal"
-      ],
-      answer: "As marcações estão fora da diagonal principal"
+      question: "Considere f(x) = 3x - 2. Qual é o valor de f(4)?",
+      options: ["10", "12", "14", "8"],
+      answer: "10",
+      hint: "Substitua o x na função."
     },
     {
-      question: "Considere f(x) = x² - 4x + 3. O valor mínimo da função ocorre em x = ?",
-      options: ["1", "2", "3", "4"],
-      answer: "2"
+      question: "De acordo com o gráfico da função f(x) = x² - 2x - 3, qual é o valor mínimo de f(x)?",
+      image: "grafico1.png",
+      options: ["-4", "-3", "-1", "0"],
+      answer: "-4"
     },
     {
       question: "O gráfico da função f(x) = -2x² + 8x - 6 é:",
@@ -230,11 +242,6 @@ export const questions = {
       question: "Se f(x) = 2x e g(x) = x + 1, quanto vale (f ∘ g)(3)?",
       options: ["8", "7", "6", "5"],
       answer: "8"
-    },
-    {
-      question: "Qual o domínio da função f(x) = 1 / (x - 2)?",
-      options: ["ℝ", "ℝ - {2}", "x > 0", "x ≠ 0"],
-      answer: "ℝ - {2}"
     }
   ],
   // Questões Rubens

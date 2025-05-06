@@ -1,10 +1,13 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { questions } from "../Questions"
+import qrCode from "../img/qrcodeMath.png"
+import { s, span } from "framer-motion/client"
 
 function Home() {
     const navigate = useNavigate()
     const [selectedDifficulty, setSelectedDifficulty] = useState('easy')
+    const [showQrCode, setShowQrCode] = useState(false)
 
     // Dificuldades disponíveis
     const difficulties = [
@@ -82,6 +85,24 @@ function Home() {
                         }`}
                 >
                     Jogar
+                </button>
+                <button className="mt-4">
+                    {showQrCode ? (
+                        <img
+                            src={qrCode}
+                            alt="QR Code"
+                            className="w-32 h-32 mt-4 rounded-lg shadow-lg transition-transform duration-300 transform hover:scale-105"
+                            onClick={() => setShowQrCode(false)}
+                        />
+                    ) : (
+                        <span
+                            onClick={() => setShowQrCode(true)}
+                            className={`text-[#F7FCE9] text-xl cursor-pointer transition-all duration-200
+                                ${selectedDifficulty === 'rubens' ? 'text-red-100' : 'text-[#f4ff9b]'}`}
+                        >
+                            Clique para compartilhar
+                        </span>
+                    )}
                 </button>
             </div>
         </div>

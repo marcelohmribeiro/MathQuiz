@@ -59,7 +59,7 @@ export const questions = {
     },
     {
       question: "O que é um conjunto vazio?",
-      options: ["{ }", "{0}", "{}", "{1}"],
+      options: ["{ }", "{0}", "{∅}", "{1}"],
       answer: "{ }",
       hint: "Um conjunto vazio não contém nenhum elemento."
     },

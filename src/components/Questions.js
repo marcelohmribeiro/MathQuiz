@@ -130,9 +130,9 @@ export const questions = {
     },
     {
       question: "Qual das seguintes representações mostra que uma relação é não reflexiva?",
-      options: ["(1,1) está presente", "(2,2) não está presente", "Todos os pares são do tipo (a,a)", "A relação é vazia"],
+      options: ["(1, 1) está presente", "(2, 2) não está presente", "Todos os pares são do tipo (a, a)", "A relação é vazia"],
       answer: "A relação é vazia",
-      hint: "Uma relação reflexiva tem pares do tipo (a,a)."
+      hint: "Uma relação reflexiva tem pares do tipo (a, a)."
     },
     {
       question: "Considere f(x) = 3x - 2. Qual é o valor de f(4)?",
@@ -155,9 +155,9 @@ export const questions = {
   // Questões Dificieis
   hard: [
     {
-      question: "Se A = {1,2,3}, B = {2,3,4}, e C = {3,4,5}, qual é (A ∩ B) ∪ C?",
-      options: ["{1,2,3,4,5}", "{2,3,4,5}", "{3,4,5}", "{1,2,3}"],
-      answer: "{2,3,4,5}"
+      question: "Se A = {1, 2, 3}, B = {2, 3, 4}, e C = {3, 4, 5}, qual é (A ∩ B) ∪ C?",
+      options: ["{1, 2, 3, 4, 5}", "{2, 3, 4, 5}", "{3, 4, 5}", "{1, 2, 3}"],
+      answer: "{2, 3, 4, 5}"
     },
     {
       question: "Se n(A) = 4 e n(B) = 3, quantos elementos terá A × B?",
@@ -181,8 +181,8 @@ export const questions = {
     },
     {
       question: "Se R é simétrica e contém (2, 5), então também contém:",
-      options: ["(5,2)", "(2,2)", "(5,5)", "(2,3)"],
-      answer: "(5,2)"
+      options: ["(5, 2)", "(2, 2)", "(5, 5)", "(2, 3)"],
+      answer: "(5, 2)"
     },
     {
       question: "Uma relação R em A = {1,2} com todos os pares do tipo (a,b) é dita:",
@@ -190,14 +190,14 @@ export const questions = {
       answer: "Universal"
     },
     {
-      question: "A matriz de uma relação R entre A = {1,2} e B = {3,4}, com R = {(1,3), (2,4)}, será:",
+      question: "A matriz de uma relação R entre A = {1, 2} e B = {3, 4}, com R = {(1, 3), (2, 4)}, será:",
       options: [
-        "Diagonal principal preenchida",
-        "1s nas posições (1,1) e (2,2)",
-        "1s nas posições (1,3) e (2,4)",
-        "1s fora da diagonal"
+        "Apenas a diagonal está preenchida",
+        "A matriz tem marcações nas posições (1, 1) e (2, 2)",
+        "A matriz tem marcações nas posições (1, 3) e (2, 4)",
+        "As marcações estão fora da diagonal principal"
       ],
-      answer: "1s fora da diagonal"
+      answer: "As marcações estão fora da diagonal principal"
     },
     {
       question: "Considere f(x) = x² - 4x + 3. O valor mínimo da função ocorre em x = ?",
@@ -239,7 +239,6 @@ export const questions = {
   ],
   // Questões Rubens
   rubens: [
-    // Conjuntos (4)
     {
       question: "Se A = {x ∈ ℕ | x ≤ 10}, B = {2, 4, 6, 8, 10}, qual é A - B?",
       options: [
@@ -256,19 +255,17 @@ export const questions = {
       answer: "128"
     },
     {
-      question: "Dado A = {a,b}, B = {1,2}, qual o número de pares ordenados distintos de A × B?",
+      question: "Dado A = {a, b}, B = {1, 2}, qual o número de pares ordenados distintos de A × B?",
       options: ["2", "4", "6", "8"],
       answer: "4"
     },
     {
-      question: "Se A ∪ B = {1,2,3,4,5} e A ∩ B = {2,3}, é possível que A = {1,2,3,4}?",
+      question: "Se A ∪ B = {1, 2, 3, 4, 5} e A ∩ B = {2, 3}, é possível que A = {1, 2, 3, 4}?",
       options: ["Sim", "Não"],
       answer: "Sim"
     },
-
-    // Relações (4)
     {
-      question: "Uma relação R em A = {1,2,3} é reflexiva se:",
+      question: "Uma relação R em A = {1, 2, 3} é reflexiva se:",
       options: [
         "Contém todos os pares (a,a)",
         "Não contém pares repetidos",
@@ -278,26 +275,25 @@ export const questions = {
       answer: "Contém todos os pares (a,a)"
     },
     {
-      question: "Se R é uma relação em A = {1,2,3} e R = {(1,2), (2,3), (1,3)}, então R é:",
+      question: "Se R é uma relação em A = {1, 2, 3} e R = {(1, 2), (2, 3), (1, 3)}, então R é:",
       options: ["Transitiva", "Simétrica", "Reflexiva", "Vazia"],
       answer: "Transitiva"
     },
     {
       question: "Qual condição define uma relação simétrica?",
       options: [
-        "Se (a,b) ∈ R então (b,a) ∈ R",
-        "Se (a,b) ∈ R então (a,a) ∈ R",
-        "Se (a,b) ∈ R então (a,c) ∈ R",
-        "Se (a,a) ∈ R então R é universal"
+        "Se (a, b) ∈ R então (b, a) ∈ R",
+        "Se (a, b) ∈ R então (a, a) ∈ R",
+        "Se (a, b) ∈ R então (a, c) ∈ R",
+        "Se (a, a) ∈ R então R é universal"
       ],
-      answer: "Se (a,b) ∈ R então (b,a) ∈ R"
+      answer: "Se (a, b) ∈ R então (b, a) ∈ R"
     },
     {
       question: "Uma matriz de relação 3x3 com 1s apenas na diagonal principal representa:",
       options: ["Reflexiva", "Simétrica", "Antissimétrica", "Todas as anteriores"],
       answer: "Todas as anteriores"
     },
-    // Funções com gráficos (4)
     {
       question: "Qual gráfico representa a função f(x) = x² - 4?",
       options: [
@@ -334,12 +330,12 @@ export const questions = {
     {
       question: "Qual gráfico representa a função f(x) = x³?",
       options: [
-        "Curva que cresce à esquerda e à direita da origem com inflexão em (0,0)",
+        "Curva que cresce à esquerda e à direita da origem com inflexão em (0, 0)",
         "Parábola com vértice na origem",
         "Reta constante",
         "Função decrescente com assíntota horizontal"
       ],
-      answer: "Curva que cresce à esquerda e à direita da origem com inflexão em (0,0)",
+      answer: "Curva que cresce à esquerda e à direita da origem com inflexão em (0, 0)",
       image: grafico6
     }
   ]

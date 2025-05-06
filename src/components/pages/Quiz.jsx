@@ -6,8 +6,9 @@ import errou from "../sounds/errou.mp3"
 import palmas from "../sounds/palmas.mp3"
 import relogio from "../sounds/relogio.mp3"
 // Components
-import IntroRubens from "../layout/IntroRubens"
-import HintRubens from "../layout/HintRubens"
+import IntroRubens from "../hooks/IntroRubens"
+import HintRubens from "../hooks/HintRubens"
+import { Sound } from "../hooks/Sound"
 
 function Quiz() {
     const navigate = useNavigate()
@@ -31,6 +32,7 @@ function Quiz() {
 
     const [showIntro, setShowIntro] = useState(false)
     const [isSoundEnabled, setIsSoundEnabled] = useState(localStorage.getItem('sound') === 'true')
+    const { playSound, stopSound } = Sound(isSoundEnabled)
 
     const sounds = [
         peido,
@@ -108,13 +110,6 @@ function Quiz() {
         setTime(initialTime())
     }, [difficulty, questions, showIntro])
 
-    // Função para tocar o som
-    const playSound = (src) => {
-        if (!isSoundEnabled) return
-        const audio = new Audio(src)
-        audio.play()
-    }
-
     // Função para deligar o som
     const toggleSound = () => {
         setIsSoundEnabled(prev => !prev)
@@ -126,6 +121,7 @@ function Quiz() {
         if (isDisabled) return
         setSelectedOption(selectedOption)
         setIsDisabled(true)
+        stopSound()
         const isCorrect = selectedOption === currentQuestion.answer
         let updatedScore = score
         let updatedCorrectAnswers = correctAnswers

@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { IoCloseOutline } from "react-icons/io5"
-import qrCode from "../img/qrcodeMath.png"
+import qrCode from "../img/qrcodeMath.jpeg"
 
 export default function QrCodeComponent({ selectedDifficulty }) {
     const [showQrCode, setShowQrCode] = useState(false)
